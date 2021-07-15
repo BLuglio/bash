@@ -53,6 +53,15 @@ for i in 'grep -l matchpattern $firstdir/*'; do       # find the names of files 
 done
 ```
 
+replace with sed:
+```
+console_url="some_string"
+grafana_url="some_other_string"
+
+find /usr/share/nginx/html/assets -type f -exec sed -i "s/%console_url%/${console_url}/g" {} +
+find /usr/share/nginx/html/assets -type f -exec sed -i "s/%grafana_url%/${grafana_url}/g" {} +
+```
+
 random password generator from a list of usernames:
 ```
 rm -f ./results/users_pwd.txt
