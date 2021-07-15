@@ -62,6 +62,11 @@ find /usr/share/nginx/html/assets -type f -exec sed -i "s/%console_url%/${consol
 find /usr/share/nginx/html/assets -type f -exec sed -i "s/%grafana_url%/${grafana_url}/g" {} +
 ```
 
+get files in a given folder containing a certain string:
+```
+grep -rnwl '/usr/share/nginx/html' -e 'google.com'
+```
+
 random password generator from a list of usernames:
 ```
 rm -f ./results/users_pwd.txt
