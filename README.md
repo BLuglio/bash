@@ -10,9 +10,9 @@ find file:
 ```
 sudo find -name "filename.ext"
                 "file.?"      // file.1, file.2, file.a
-		            "file.[a-d]"  // file.a, file.b, file.c, file.d
-		            "file.[ac]"   // file.a, file.c
-		            "file.[^ab]"  // all except: file.a, file.b
+		"file.[a-d]"  // file.a, file.b, file.c, file.d
+		"file.[ac]"   // file.a, file.c
+		"file.[^ab]"  // all except: file.a, file.b
 ```
 
 change directory/file permissions:
