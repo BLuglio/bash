@@ -52,3 +52,16 @@ for i in 'grep -l matchpattern $firstdir/*'; do       # find the names of files 
         echo $i
 done
 ```
+
+random password generator from a list of usernames:
+```
+rm -f ./results/users_pwd.txt
+
+while read user; do
+  rand_str=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16)
+
+  # create new password
+  echo -e "USERNAME: ${user}\t\t\t\tPASSWORD: ${rand_str}" | tr -d '\r' | tr -d ' ' >> ./results/users_pwd.txt
+done <users.txt
+```
+
